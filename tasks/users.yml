@@ -1,5 +1,5 @@
 ---
-
+- include_vars: "{{ vault }}"
 - name: users > Template config
   template:
     src:  "{{ manala_proftpd_users_template|ternary(manala_proftpd_users_template, 'users/default.j2') }}"
